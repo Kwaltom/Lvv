@@ -16,6 +16,7 @@ body {
 }
 
 .card {
+  display:none;
   background:white;
   padding:30px;
   border-radius:20px;
@@ -41,7 +42,7 @@ button {
 
 <body>
 
-<div class="card">
+<div class="card" id="card">
   <h2>Hey You 💌</h2>
 
   <p id="msg">I made this little page just for you.</p>
@@ -50,8 +51,30 @@ button {
 </div>
 
 <script>
+const password = "lawestt";
+let input = "";
+
+// keep asking until correct
+while (input !== password) {
+  input = prompt("Enter the secret word to open your page 💖");
+
+  if (input === null) {
+    document.body.innerHTML =
+      "<h2 style='color:white;text-align:center;'>Come back when you’re ready 💕</h2>";
+    break;
+  }
+
+  if (input !== password) {
+    alert("Wrong secret word 💔 Try again.");
+  }
+}
+
+if(input === password){
+  document.getElementById("card").style.display = "block";
+}
+
 function showLove(){
-  document.getElementById("msg").innerHTML = `
+document.getElementById("msg").innerHTML = `
 Gabby, being with you or even just thinking of you makes the world feel softer, brighter, and full of warmth.<br><br>
 
 You have this incredible way of making ordinary moments feel special, and I find myself smiling at the thought of you more than I ever thought possible.<br><br>
@@ -60,10 +83,10 @@ I love you not just for the way you look, or your laugh, but for the way you see
 
 Every day with you is a gift I never want to take for granted, and today, I just want to tell you how deeply, completely, and endlessly grateful I am to have you in my life.<br><br>
 
-<strong>Forever yours, with all my heart 💕 Lawestt09</strong>
+<strong>Forever yours, with all my heart 💕</strong>
 `;
 
-  document.getElementById("btn").style.display = "none";
+document.getElementById("btn").style.display = "none";
 }
 </script>
 
