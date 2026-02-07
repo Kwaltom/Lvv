@@ -20,7 +20,7 @@ body {
   padding:30px;
   border-radius:20px;
   text-align:center;
-  max-width:360px;
+  max-width:380px;
   box-shadow:0 15px 35px rgba(0,0,0,.2);
 }
 
@@ -31,6 +31,10 @@ button {
   padding:12px 18px;
   border-radius:12px;
   font-size:16px;
+}
+
+#msg {
+  line-height: 1.6;
 }
 </style>
 </head>
@@ -47,10 +51,19 @@ button {
 
 <script>
 function showLove(){
-  document.getElementById("msg").innerHTML =
-  "You are appreciated, valued, and loved more than you know. Happy Valentine ❤️";
+  document.getElementById("msg").innerHTML = `
+Gabby, being with you or even just thinking of you makes the world feel softer, brighter, and full of warmth.<br><br>
 
-  document.getElementById("btn").style.display = "none"; // hides button after click
+You have this incredible way of making ordinary moments feel special, and I find myself smiling at the thought of you more than I ever thought possible.<br><br>
+
+I love you not just for the way you look, or your laugh, but for the way you see me, understand me, and make me feel truly at home in your heart.<br><br>
+
+Every day with you is a gift I never want to take for granted, and today, I just want to tell you how deeply, completely, and endlessly grateful I am to have you in my life.<br><br>
+
+<strong>Forever yours, with all my heart 💕</strong>
+`;
+
+  document.getElementById("btn").style.display = "none";
 }
 </script>
 
