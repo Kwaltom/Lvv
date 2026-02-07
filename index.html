@@ -38,17 +38,19 @@ button {
 <body>
 
 <div class="card">
-<h2>Hey You 💌</h2>
+  <h2>Hey You 💌</h2>
 
-<p id="msg">I made this little page just for you.</p>
+  <p id="msg">I made this little page just for you.</p>
 
-<button onclick="showLove()">Open Message</button>
+  <button id="btn" onclick="showLove()">Open Message</button>
 </div>
 
 <script>
 function showLove(){
-document.getElementById("msg").innerHTML =
-"You are appreciated, valued, and loved more than you know. Happy Valentine ❤️";
+  document.getElementById("msg").innerHTML =
+  "You are appreciated, valued, and loved more than you know. Happy Valentine ❤️";
+
+  document.getElementById("btn").style.display = "none"; // hides button after click
 }
 </script>
 
